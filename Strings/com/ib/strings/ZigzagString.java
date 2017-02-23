@@ -64,7 +64,7 @@ public class ZigzagString {
 		//append all strings from array ..  
 		StringBuilder outputSb = new StringBuilder();
 		for (int j = 0; j < zigzag.size(); j++) {
-				outputSb.append(zigzag.get(j).toString());
+				outputSb.append(zigzag.get(j));
 			
 		}// end of for loop
 
