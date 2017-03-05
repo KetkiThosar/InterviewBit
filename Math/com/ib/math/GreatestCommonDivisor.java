@@ -26,26 +26,56 @@ public class GreatestCommonDivisor {
 	 * @param args
 	 */
 
-	static public int gcd(int a, int b) {
-		int smallNumber = a, largeNumber = b;
-		if (a <= b) {
-			smallNumber = b;
-			largeNumber = a;
-		}
-		int max = Integer.MIN_VALUE;
-		for (int i = 1; i <= smallNumber; i++) {
-			if (smallNumber % i == 0 && largeNumber % i == 0) {
-				max = Math.max(max, i);
-			}
-		}
-		return max;
+	/**
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	
 
+	/**
+	 * 
+	 * more correct way of calculating gcd . Interview bit version
+	 * using euclid's algorithm which uses division algorithm
+	 * gcd of two numbers also divides their difference.
+	 * @param A
+	 * @param B
+	 * @return
+	 */
+	static public int gcd(int A, int B) {
+		System.out.println("  A  " + A + "  B  " + B);
+		if (A == 0)
+			return B;
+		return gcd(B % A, A);
 	}
 
-	public static void main(String[] args) {
-		System.out.println("" + gcd(475, 125));
+	// one more algorithm for calculating gcd
+	/*
+	 * Input: a, b 
+	 * positive integers Output: g and d 
+	 * such that g is odd and
+	 * gcd(a, b) = g×2d
+	 *  d := 0 
+	 * while a and b are both even do
+	 *  a := a/2 
+	 *  b := b/2
+	 * d := d + 1 
+	 * while a ≠ b 
+	 * do if a is even 
+	 * then a := a/2 
+	 * else if b is even
+	 * then b := b/2
+	 * else if a > b then 
+	 * a := (a – b)/2 
+	 * else b := (b – a)/2 
+	 * g :=
+	 * a output g, d
+	 */
 
+	public static void main(String[] args) {
+		System.out.println("" + gcd(5, 12));
+		System.out.println("" + gcd(45, 78));
 	}
 
 }
