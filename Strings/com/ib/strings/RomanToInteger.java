@@ -81,7 +81,7 @@ public class RomanToInteger {
 		System.out.println("ans:MMXIV "+romanToInt("MMXIV"));
 		System.out.println("ans:CD "+romanToInt("CD"));
 		System.out.println("ans:MLXVI "+romanToInt("MLXVI"));
-		System.out.println("ans:CCVII "+romanToInt("CCVII"));
+		System.out.println("ans:CCVII "+romanToIntIBVersion("CCVII"));
 		System.out.println("ans:XCIX "+romanToIntIBVersion("XI"));
 	}
 
