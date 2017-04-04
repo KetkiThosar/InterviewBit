@@ -1,7 +1,40 @@
 package com.ib.arrays;
 
 import java.util.ArrayList;
+/**
+ * Input: 	
 
+1 2 3
+4 5 6
+7 8 9
+
+Return the following :
+
+[ 
+  [1],
+  [2, 4],
+  [3, 5, 7],
+  [6, 8],
+  [9]
+]
+
+
+Input : 
+1 2
+3 4
+
+Return the following  : 
+
+[
+  [1],
+  [2, 3],
+  [4]
+]
+
+ * 
+ * @author ketki
+ *
+ */
 public class AntiDialgonals {
 
 	static public ArrayList<ArrayList<Integer>> diagonal(
@@ -11,7 +44,8 @@ public class AntiDialgonals {
 			return diagonals;
 		}
 		int maxRow = a.size(), maxCol = a.get(0).size();
-		int row = 0, col = 0;
+		int row = 0;
+		//col = 0;
       
 		for (int i = 0; i < (2 * maxRow - 1); i++) {
 			diagonals.add(new ArrayList<Integer>());

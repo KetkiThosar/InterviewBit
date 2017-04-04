@@ -67,7 +67,7 @@ public class MatrixClass {
 	}
 
 	public static void main(String[] args) {
-
+		MaximumAbsoluteDifference di=new MaximumAbsoluteDifference();
 		printMatrix();
 	}
 

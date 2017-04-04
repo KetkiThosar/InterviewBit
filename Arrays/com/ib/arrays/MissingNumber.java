@@ -3,6 +3,22 @@ package com.ib.arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Given an unsorted integer array, find the first missing positive integer.
+ * 
+ * Example:
+ * 
+ * Given [1,2,0] return 3,
+ * 
+ * [3,4,-1,1] return 2,
+ * 
+ * [-8, -7, -6] returns 1
+ * 
+ * Your algorithm should run in O(n) time and use constant space.
+ * 
+ * @author ketki
+ *
+ */
 public class MissingNumber {
 
 	static int firstMinimumPositiveNumber(ArrayList<Integer> a) {
@@ -47,18 +63,18 @@ public class MissingNumber {
 		System.out.println(+m());
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 		// arr.add(1);
-		/*arr.add(-7);
-		arr.add(-6);*/
-		
-		/*arr.add(3);
-		arr.add(4);
-		arr.add(-1);
-		arr.add(1);*/
-		
+		/*
+		 * arr.add(-7); arr.add(-6);
+		 */
+
+		/*
+		 * arr.add(3); arr.add(4); arr.add(-1); arr.add(1);
+		 */
+
 		arr.add(3);
 		arr.add(7);
 		arr.add(14);
-		
+
 		System.out.println("number found: " + firstMinimumPositiveNumber(arr));
 
 	}

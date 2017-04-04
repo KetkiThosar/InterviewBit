@@ -4,8 +4,31 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * You are given a read only array of n integers from 1 to n.
+ * 
+ * Each integer appears exactly once except A which appears twice and B which is
+ * missing.
+ * 
+ * Return A and B.
+ * 
+ * Note: Your algorithm should have a linear runtime complexity. Could you
+ * implement it without using extra memory?
+ * 
+ * Note that in your output A should precede B.
+ * 
+ * Example:
+ * 
+ * Input:[3 1 2 5 3]
+ * 
+ * Output:[3, 4]
+ * 
+ * A = 3, B = 4
+ * 
+ * @author ketki
+ *
+ */
 public class RepeatAndMissingNumberArray {
-
 
 	public ArrayList<Integer> repeatedNumber(final List<Integer> a) {
 		ArrayList<Integer> repeatedNums = new ArrayList<Integer>(2);
@@ -69,16 +92,16 @@ public class RepeatAndMissingNumberArray {
 		return res;
 
 	}
-	public static void main(String[] args) {
-	 ArrayList<Integer>arr=new ArrayList<Integer>();
-	 arr.add(100000);
-	 arr.add(1000);
-	 arr.add(10000);
-	 arr.add(5);
-	 arr.add(1000);
-	 arr.add(100000);
-	 repeatedNumber1(arr);
-	}
-	
-}
 
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		arr.add(100000);
+		arr.add(1000);
+		arr.add(10000);
+		arr.add(5);
+		arr.add(1000);
+		arr.add(100000);
+		repeatedNumber1(arr);
+	}
+
+}
