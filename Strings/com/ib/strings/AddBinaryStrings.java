@@ -27,6 +27,7 @@ public class AddBinaryStrings {
 		while (first >= 0 || second >= 0) {
 			int sum = carry;
 			if (first >= 0) {
+				//get numeric value of the character
 				sum += s1.charAt(first) - '0';
 				first--;
 			}
@@ -34,7 +35,10 @@ public class AddBinaryStrings {
 				sum += s2.charAt(second) - '0';
 				second--;
 			}
+			//right shift if sum was 2 or 3 , carry will be 1
 			carry = sum >> 1;
+			
+			//& 1 gives if last bit is set or not 
 			sum = sum & 1;
 			sb.append(sum == 0 ? '0' : '1');
 		}
