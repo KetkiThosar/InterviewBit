@@ -36,7 +36,7 @@ public class MaxNonNegativeSubArray {
 		//initialize maxSum to the lowest value.
 		long maxSumTill = 0, maxSum = Integer.MIN_VALUE;
 		//initialize array to hold maxSum of sub-array
-		long[] sum = new long[1];
+		long recordedSum=0;
 		for (int i = 0; i < a.size(); i++) {
 			int k = i;
 			//initialize for every sub array
@@ -57,7 +57,7 @@ public class MaxNonNegativeSubArray {
 					} else {
 						//if sum is the maximum sum so far OR length of sub-array is greater that previous one OR 
 						//starting index is minimum
-						if (maxSum > sum[0]
+						if (maxSum > recordedSum
 								|| (i - k) > (maxSubArray.get(1) - maxSubArray
 										.get(0)) || k < maxSubArray.get(0)) {
 							//update the values
@@ -66,7 +66,7 @@ public class MaxNonNegativeSubArray {
 						}
 					}
 					//store the maxSum
-					sum[0] = maxSum;
+					recordedSum = maxSum;
 				}
 				i++;
 			}// while loop

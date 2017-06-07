@@ -75,10 +75,11 @@ public class MaxSumContiguousSubarray {
 		int currentSum = 0;
 		for (int num : a) {
 			currentSum += num;
-			sum = Math.max(currentSum, sum);
+		
 			if (currentSum < 0) {
 				currentSum = 0;
 			}
+			sum = Math.max(currentSum, sum);
 		}
 		return sum;
 	}

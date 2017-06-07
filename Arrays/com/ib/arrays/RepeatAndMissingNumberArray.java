@@ -30,10 +30,10 @@ import java.util.List;
  */
 public class RepeatAndMissingNumberArray {
 
-	public ArrayList<Integer> repeatedNumber(final List<Integer> a) {
+	static public ArrayList<Integer> repeatedNumber(final List<Integer> a) {
 		ArrayList<Integer> repeatedNums = new ArrayList<Integer>(2);
-		repeatedNums.set(0, 0);
-		repeatedNums.set(1, 0);
+		repeatedNums.add( 0);
+		repeatedNums.add( 0);
 		if (null == a || 0 == a.size()) {
 			System.out.println("array is empty...");
 			return repeatedNums;
@@ -84,6 +84,8 @@ public class RepeatAndMissingNumberArray {
 			sum += A.get(i);
 		}
 
+		System.out.println(""+(1L * n * (1L * n + 1)));
+		System.out.println(""+(2 - sum + rep));
 		miss = (int) ((1L * n * (1L * n + 1)) / 2 - sum + rep);
 
 		res.add(rep);
@@ -101,7 +103,8 @@ public class RepeatAndMissingNumberArray {
 		arr.add(5);
 		arr.add(1000);
 		arr.add(100000);
-		repeatedNumber1(arr);
+		System.out.println(repeatedNumber1(arr));
+		System.out.println(repeatedNumber(arr));
 	}
 
 }

@@ -29,7 +29,7 @@ public class WaveArray {
 	 * @param args
 	 */
 	static public ArrayList<Integer> wave(ArrayList<Integer> a) {
-		if (null == a || 0 == a.size()) {
+		if (null == a ||a.size()<2) {
 			return a;
 		}
 		Collections.sort(a);
@@ -49,9 +49,10 @@ public class WaveArray {
 	public static void main(String[] args) {
 		ArrayList<Integer> a1 = new ArrayList<Integer>();
 		a1.add(15);
-		/*
-		 * a1.add(1); a1.add(0); a1.add(0); a1.add(-1); a1.add(2); a1.add(4);
-		 */
+		
+		  a1.add(1); a1.add(0); a1.add(0); a1.add(-1); a1.add(2); a1.add(4);
+		System.out.println("input array: "+a1.toString());
+		System.out.println();
 		System.out.println("" + wave(a1));
 	}
 

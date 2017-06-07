@@ -1,6 +1,7 @@
 package com.ib.arrays;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Given an index k, return the kth row of the Pascal’s triangle.
@@ -30,7 +31,7 @@ public class KthRowPascalTriangle {
 		 * if(a<0){ return new ArrayList<Integer>(); }
 		 */
 		// declare list of list
-		ArrayList<ArrayList<Integer>> pt = new ArrayList<>();
+		List<List<Integer>> pt = new ArrayList<List<Integer>>();
 
 		// add first row
 		pt.add(new ArrayList<Integer>());
@@ -51,7 +52,7 @@ public class KthRowPascalTriangle {
 			pt.get(i).add(1);
 			// pt.pt.get(i).add(row);
 		}
-		return pt.get(a);
+		return (ArrayList<Integer>) pt.get(a);
 
 	}
 

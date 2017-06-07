@@ -16,6 +16,10 @@ import java.util.Collections;
  * 
  * Your algorithm should run in O(n) time and use constant space.
  * 
+ * e.g. [1] return 2
+ * else 
+ * return 1
+ * 
  * @author ketki
  *
  */
@@ -70,10 +74,14 @@ public class MissingNumber {
 		/*
 		 * arr.add(3); arr.add(4); arr.add(-1); arr.add(1);
 		 */
-
+		arr.add(1);
+		arr.add(2);
 		arr.add(3);
+		arr.add(4);
+		arr.add(5);
+		arr.add(6);
 		arr.add(7);
-		arr.add(14);
+		arr.add(8);
 
 		System.out.println("number found: " + firstMinimumPositiveNumber(arr));
 
