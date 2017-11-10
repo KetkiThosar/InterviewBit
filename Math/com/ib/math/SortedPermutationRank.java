@@ -32,6 +32,14 @@ public class SortedPermutationRank {
 	 * 
 	 * @param a
 	 * @return
+	 * 
+	 * The logic is to find the rank by calculating current's character position in 
+	 * sorted string and multiplying it by (N-1)!
+	 * e.g. Number of permutation with character C as first character = number of permutations
+	 * possible with remaining N-1 character= (N-1)! 
+	 *
+	 * rank=no of characters less than the given character * (N-1)! + no of permutations of string 
+	 * with the first character removed.
 	 */
 	static public int findRank2(String a) {
 		System.out.print(a + "\t\t");
@@ -42,8 +50,11 @@ public class SortedPermutationRank {
 		long permutation = 0;
 		for (int i = 0; i < a.length(); i++) {
 			permutation += lessCharNumber(i, a) * fact(a.length() - i - 1);
+			/*to avoid overflow of the number*/
 			permutation %= 1000003;
 		}
+		/*total permutations counted till this steps are the total permutation of the
+		  string before current rank hence add 1 for the current  */
 		permutation += 1;
 
 		return (int) (permutation);
@@ -60,6 +71,13 @@ public class SortedPermutationRank {
 
 	}
 
+	/**
+	 * This function is finding how many letters are less than the 
+	 * letter at given index for given string.
+	 * @param i
+	 * @param a
+	 * @return
+	 */
 	static int lessCharNumber(int i, String a) {
 		int lessCount = 0;
 		for (int j = i + 1; j < a.length(); j++) {
