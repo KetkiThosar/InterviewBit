@@ -42,10 +42,8 @@ public class PalindromeInteger {
 		int start = 0;
 
 		while (start < end) {
-			if (sb.charAt(start) != sb.charAt(end))
+			if (sb.charAt(start++) != sb.charAt(end--))
 				return false;
-			start++;
-			end--;
 		}
 		return true;
 
